@@ -1,0 +1,4 @@
+{
+  "compilerOptions": { "strict": true, "target": "ES2015" },
+  "include": ["vite-env.d.ts", "day01"]
+}
