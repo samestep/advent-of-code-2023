@@ -1,4 +1,5 @@
 mod day01;
+mod day03;
 mod day10;
 
 use std::{env, fs};
@@ -11,6 +12,8 @@ fn main() {
     let answer = match (puzzle, day) {
         (1, 1) => day01::puzzle1(&input).to_string(),
         (1, 2) => day01::puzzle2(&input).to_string(),
+
+        (3, 1) => day03::puzzle1(&input).to_string(),
 
         (10, 1) => day10::puzzle1(&input).to_string(),
         (10, 2) => day10::puzzle2(&input).to_string(),
