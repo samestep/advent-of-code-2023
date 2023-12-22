@@ -47,6 +47,18 @@ pub fn puzzle1(input: &str) -> usize {
         .sum()
 }
 
+pub fn puzzle2(input: &str) -> usize {
+    parse(input)
+        .into_iter()
+        .map(|game| {
+            let red = game.iter().map(|set| set.red).max().unwrap();
+            let green = game.iter().map(|set| set.green).max().unwrap();
+            let blue = game.iter().map(|set| set.blue).max().unwrap();
+            red * green * blue
+        })
+        .sum()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -62,5 +74,15 @@ mod tests {
     #[test]
     fn test_puzzle1_input() {
         assert_eq!(puzzle1(INPUT), 2283);
+    }
+
+    #[test]
+    fn test_puzzle2_example() {
+        assert_eq!(puzzle2(EXAMPLE), 2286);
+    }
+
+    #[test]
+    fn test_puzzle2_input() {
+        assert_eq!(puzzle2(INPUT), 78669);
     }
 }
