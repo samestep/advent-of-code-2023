@@ -1,5 +1,6 @@
 mod day01;
 mod day03;
+mod day05;
 mod day10;
 
 use std::{env, fs};
@@ -15,6 +16,8 @@ fn main() {
 
         (3, 1) => day03::puzzle1(&input).to_string(),
         (3, 2) => day03::puzzle2(&input).to_string(),
+
+        (5, 1) => day05::puzzle1(&input).to_string(),
 
         (10, 1) => day10::puzzle1(&input).to_string(),
         (10, 2) => day10::puzzle2(&input).to_string(),
