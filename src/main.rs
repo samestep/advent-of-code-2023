@@ -23,6 +23,7 @@ fn main() {
         (3, 2) => day03::puzzle2(&input).to_string(),
 
         (4, 1) => day04::puzzle1(&input).to_string(),
+        (4, 2) => day04::puzzle2(&input).to_string(),
 
         (5, 1) => day05::puzzle1(&input).to_string(),
 
